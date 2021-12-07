@@ -4,7 +4,7 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 .dark-mode {
-  background-color: rgb(34, 0, 0);;
+  background-color: rgb(20, 20, 20);;
   color: rgb(255, 255, 255);
 }
 
@@ -13,7 +13,7 @@ body {
   margin-left: 400px;
   width:70%;
   height: 500px;
-  box-shadow: 0px 0px 1px 10px #4600008c;
+  box-shadow: 0px 0px 5px 2.5px #4600008c;
 color: rgb(38, 50, 56);
 font-weight: 700;
 font-size: 14px;
@@ -25,8 +25,8 @@ border: 2px solid rgba(0, 0, 0, 0.02);
 font-family: 'Ubuntu', sans-serif;
 }
 .dark-mode .main{
-  box-shadow: 0px 0px 1px 10px #ee67675b;
-  background: #a800005b;
+  box-shadow: 0px 0px 5px 2.5px rgba(255, 255, 255, 0.459);
+  background-color:rgba(53, 53, 53, 0.863);
 }
 h1{
     margin-top: 50px;
@@ -36,6 +36,10 @@ text-align: center;
   font-weight: bold;
   font-size: 23px;
 }
+.dark-mode h1{
+color: white;
+}
+
 button{
 cursor: pointer;
 border-radius: 40px;
@@ -63,18 +67,30 @@ button[type=submit] {
     align-items: center;
   }
  button[type=submit]:hover {
-      background-color: rgb(0, 43, 33);
-    }
+  background-color: #460000;
+  color:white;
+ }
+ .dark-mode button[type=submit]{
+  background-color: rgb(0, 69, 172);
+  color:white;
+}
+    .dark-mode button[type=submit]:hover{
 
+      color: rgb(0, 69, 172);
+      background-color:white;
+      border-style: solid;
+      border-color: rgb(0, 69, 172);
+    }
+   
 form {
 margin: auto;
 width: 70%;
 height: 200px;
 padding: 15px 50px 10px 50px;
-margin-top: 30px;
+margin-top: 40px;
 font-weight: 700;
 font-size: 14px;
-background-color: rgba(170, 170, 170, 0.479);
+background-color:rgb(204, 204, 204);
 border: none;
 border-radius: 20px;
 box-sizing: border-box;

@@ -2,13 +2,12 @@
 <html>
 
 <head>
-    <title>Specula | Student</title>
+    <title>Specula | Professor Login</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/photon.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/RoomLogin.css" />
-
+    <link rel="stylesheet" href="css/ProfessorLogin.css" />
     <!-- Electron Javascript -->
 
 </head>
@@ -52,29 +51,15 @@
             }).then(response => {
                 console.log(response)
                 if (response.status == 200) {
-                    console.log(response.data.token)
-                    token = "Token " + response.data.token
+                    console.log(response.data)
+                    token = response.data
                     console.log(token)
-                    axios.get('http://192.168.43.151:8000/api/registerationStudent/ListAllStudents/', {
-                        headers: {
-                            Authorization: token
-                        }
-                    }).then(response => {
-
-                        if (response.status == 200) {
-                            console.log(response)
-                            axios.get('http://192.168.43.151:8000/userDetails/' + email).then(response => {
-                                ipcRenderer.send('axiosresponse', token,response.data.username)
-                            })
-                            
-                        }
-
-                    }).catch(function (err) {
-                        alert('Incorrect student details')
-
+                    alert('Login Successful');
+                    axios.get('http://192.168.43.151:8000/userDetails/' + email).then(response => {
+                        ipcRenderer.send('Professoraxiosresponse', token, response.data.username)
                     })
-                    //ipcRenderer.send('axiosresponse', token)
-                    //ipcRenderer.send('RoomLogin')
+
+
                 } else {
                     if (response.status == 400) {
                         alert('Enter the right details')
@@ -89,20 +74,24 @@
 
         }
     }
+
+    function sleep(milliseconds) {
+        const date = Date.now();
+        let currentDate = null;
+        do {
+            currentDate = Date.now();
+        } while (currentDate - date < milliseconds);
+    }
 </script>
 
 <body>
     <!-- Wrap your entire app inside .window -->
     <!-- .toolbar-header sits at the top of your app -->
-
-
     <!-- Your app's content goes inside .window-content -->
     <div class="window-content">
 
         <div class="padded-more">
-            <button onclick="myFunction()" style="font-size:24px"><i class="fa fa-adjust"></i></button>
-
-
+            <button onclick="myFunction()" style="font-size:24px"> <i class="fa fa-adjust"></i></button>
             <script>
                 function myFunction() {
                     var element = document.body;
@@ -110,25 +99,27 @@
                 }
             </script>
             <div class="main">
-
-                <h1>Student</h1>
-                <hr>
                 <form>
-                    <div class="form-group">
-                        <label>Email address</label>
-                        <input type="email" class="form-control" placeholder="Email" id="email">
-                    </div>
-                    <div class="form-group">
-                        <label>Password</label>
-                        <input type="password" class="form-control" placeholder="Password" id="password">
+                    <div>
+                        <h2>Professor</h2>
+                        <hr>
+                        <h1>E-mail Address</h1>
+                        <input type="email" class="field" placeholder="Email" id="email">
+
+
+                        <h1>Password</h1>
+                        <input type="password" class="field" placeholder="********" id="password">
 
                     </div>
-
                 </form>
-                <button type="submit" onclick="login()">Login</button>
+                <button class="submit" type="submit" onclick="login()">Login</button>
             </div>
+
+
         </div>
     </div>
+    </div>
+
 
 
 </body>

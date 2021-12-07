@@ -19,6 +19,7 @@
 
 <script>
     const electron = require("electron")
+    const axios = require("axios")
     window.jQuery = window.$ = require('jquery')
 
     const {
@@ -44,7 +45,15 @@
 
 <body>
 <!-- Wrap your entire app inside .window -->
+
+<button  onclick="myFunction()" style="font-size:24px"> <i class="fa fa-adjust"></i></button>
+              <script>
+              function myFunction() {
+                 var element = document.body;
+                 element.classList.toggle("dark-mode"); }
+              </script>
 <div class="window-content">
+
     <div class="padded-more">
         <div class="main">
             <div class="main-align">
@@ -73,7 +82,7 @@
                 </div>
             </div>
         </div>
-        <button class="btn btn-large btn-negative" onclick="exitRoom()">Exit Room</button>
+        <button class="btn" onclick="exitRoom()">Exit Room</button>
     </div>
 </div>
 <script>
@@ -119,7 +128,7 @@
 
         function connect(roomName, User) {
             const chatSocket = new WebSocket(
-                "ws://127.0.0.1:8000/ws/chat/" + User + "/" + roomName + "/"
+                "ws://192.168.43.151:8000/ws/chat/" + User + "/" + roomName + "/"
             );
             chatSocket.onopen = function() {
                 // subscribe to some channels
@@ -133,7 +142,7 @@
                 let ts = new Date();
                 let time = ts.getHours() + ":" + ts.getMinutes() + ":" + ts.getSeconds()
                 console.log(time)
-                    /*axios.post('http://127.0.0.1:8000/api/TimeLine/', {
+                    /*axios.post('http://192.168.43.151:8000/api/TimeLine/', {
                         student: User,
                         AItimeStamp: time,
                         CurrentExam: roomName,
