@@ -1,0 +1,100 @@
+body {
+  background-color: rgb(245, 245, 245);
+  color: rgb(27, 27, 27);
+  font-family: 'Ubuntu', sans-serif;
+}
+.dark-mode {
+  background-color: rgb(20, 20, 20);;
+  color: rgb(255, 255, 255);
+}
+
+.main{
+  margin-top: 10pt;
+  margin-left: 400px;
+  width:70%;
+  height: 500px;
+  box-shadow: 0px 0px 5px 2.5px #4600008c;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 14px;
+background: rgba(136, 126, 126, 0.04);
+border: none;
+border-radius: 20px;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+font-family: 'Ubuntu', sans-serif;
+}
+.dark-mode .main{
+  box-shadow: 0px 0px 5px 2.5px rgba(255, 255, 255, 0.459);
+  background-color:rgba(53, 53, 53, 0.863);
+}
+h1{
+    margin-top: 50px;
+text-align: center;
+  color: #4d4c4c;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+}
+.dark-mode h1{
+color: white;
+}
+
+button{
+cursor: pointer;
+border-radius: 40px;
+border-style: none;
+padding: 15px;
+margin: 9px;
+background-color: rgb(97, 0, 0);
+color: white;
+
+}
+.dark-mode button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(97, 0, 0);
+}
+button[type=submit] {
+  cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background-color: rgb(119, 0, 0);
+    padding: 10px 40px 10px 40px;
+    margin-top: 50px;
+    margin-left: 40%;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    align-items: center;
+  }
+ button[type=submit]:hover {
+  background-color: #460000;
+  color:white;
+ }
+ .dark-mode button[type=submit]{
+  background-color: rgb(0, 69, 172);
+  color:white;
+}
+    .dark-mode button[type=submit]:hover{
+
+      color: rgb(0, 69, 172);
+      background-color:white;
+      border-style: solid;
+      border-color: rgb(0, 69, 172);
+    }
+   
+form {
+margin: auto;
+width: 70%;
+height: 200px;
+padding: 15px 50px 10px 50px;
+margin-top: 40px;
+font-weight: 700;
+font-size: 14px;
+background-color:rgb(204, 204, 204);
+border: none;
+border-radius: 20px;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+text-align: center;
+font-family: 'Ubuntu', sans-serif;
+}

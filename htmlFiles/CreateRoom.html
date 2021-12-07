@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Specula | Create Room</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/photon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/create_room.css" />
+    <!-- Electron Javascript -->
+
+</head>
+
+<body>
+    <div>
+        <button onclick="myFunction()" style="font-size:24px">
+                <i class="fa fa-adjust"></i>
+            </button>
+
+
+        <script>
+            function myFunction() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+            }
+        </script>
+        <div class="main">
+
+            <h1>Create Room</h1>
+            <hr>
+
+            <form id="inputForm">
+                <div class="form">
+                    <label>Enter room name</label>
+                    <input type="email" class="form-control" placeholder="Room ID" id="roomname">
+
+
+
+                </div>
+
+                <button class="submit" id="submit" onclick="">Create</button>
+            </form>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.js" integrity="sha512-nZmAl1ClAQ0kQ2EH3H6JMQHxNt2K7pGcgxQRoMpYuuuXyPnIGaMKNS7jwZRqBJhfSRYXc2myu+iKFbwhiCL3+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const electron = require("electron")
+        const axios = require("axios")
+        const {
+            ipcRenderer
+        } = electron
+        let tokenString = 'Token'
+        let token
+        let userID
+        ipcRenderer.on('CreateRoom', (event, message, message1) => {
+            token = tokenString.concat(' ', message.token)
+            console.log(message.token)
+            userID = message1
+            console.log(userID)
+            document.querySelector('#submit').onclick = function(e) {
+                let roomname = document.querySelector('#roomname')
+
+                let roomName = roomname.value
+                let userName = userID
+                axios.get('http://192.168.43.151:8000/api/roomDetail/' + roomName + '/', {
+                    headers: {
+                        Authorization: token
+                    }
+                }).then(response => {
+
+                    console.log(response)
+                    check1 = response.data
+                    console.log(check1)
+                        //ipcRenderer.send('axiosresponse', check1)
+                    if (response.status == 200) {
+                        axios.get('http://192.168.43.151:8000/api/registerationProfessor/' + userName + '/', {
+                            headers: {
+                                Authorization: token
+                            }
+                        }).then(response => {
+                            console.log(roomName)
+                            console.log(userName)
+                            if (response.status == 200) {
+                                alert("Successfully entered the room")
+                                ipcRenderer.send('roomName', roomName, userName)
+                            }
+
+                            //ipcRenderer.send('roomName', roomName, userName)
+                        }).catch(function(err) {
+                            alert('Professor ID provided is incorrect')
+
+                        })
+
+                        console.log(roomName)
+                        console.log(userName)
+                            //ipcRenderer.send('roomName', roomName, userName)
+                    }
+                }).catch(function(err) {
+                    alert('The details provided are incorrect')
+
+                })
+
+            }
+
+        })
+    </script>
+</body>
+
+</html>

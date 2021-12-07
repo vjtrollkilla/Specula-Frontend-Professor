@@ -1,0 +1,92 @@
+body {
+  background-color: rgb(245, 245, 245);
+  color: rgb(27, 27, 27);
+  font-family: 'Ubuntu', sans-serif;
+}
+.dark-mode {
+  background-color: rgb(20, 20, 20);;
+  color: rgb(255, 255, 255);
+}
+
+.main{
+  margin-top: 70pt;
+  margin-left: 450px;
+  width:35%;
+  height: 350px;
+  box-shadow: 0px 0px 5px 2.5px #4600008c;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 14px;
+background: rgba(136, 126, 126, 0.04);
+border: none;
+border-radius: 20px;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+font-family: 'Ubuntu', sans-serif;
+}
+.dark-mode .main{
+  box-shadow: 0px 0px 5px 2.5px rgba(255, 255, 255, 0.459);
+  background-color:rgba(53, 53, 53, 0.863);
+}
+
+.sign {
+  padding-top: 40px;
+  color: #8d8d8d;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+}
+.dark-mode .sign{
+color: rgba(255, 255, 255, 0.801);
+}
+
+hr{
+  width: 80%;
+  margin-left: 50px;
+  margin: 30pt;
+
+}
+button{
+cursor: pointer;
+border-radius: 40px;
+border-style: none;
+padding: 15px;
+margin: 9px;
+background-color: rgb(97, 0, 0);
+color: white;
+
+}
+.dark-mode button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(97, 0, 0);
+}
+
+.submit {
+  cursor: pointer;
+    border-radius: 15px;
+    color: #fff;
+    background-color: rgb(119, 0, 0);
+    padding: 10px 40px 10px 40px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 37%;
+    margin-top: 20px;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  }
+   .submit:hover {
+    color: rgb(119, 0, 0);
+    background-color:white;
+    border-style: solid;
+    border-color: rgb(119, 0, 0);
+  }
+
+  .dark-mode .submit:hover{
+    color: rgb(0, 69, 172);
+    background-color:white;
+    border-style: solid;
+    border-color: rgb(0, 69, 172);
+  }
+  .dark-mode .submit{
+    background-color: rgb(0, 69, 172);
+         color:white;
+     }
