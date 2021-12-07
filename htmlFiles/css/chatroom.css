@@ -1,0 +1,113 @@
+body {
+  background-color: rgb(245, 245, 245);
+  color: rgb(27, 27, 27);
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.dark-mode {
+  background-color: rgb(34, 0, 0);;
+  color: rgb(255, 255, 255);
+}
+.dark-mode label{
+  color: white;
+}
+.dark-mode li.colorChange{
+  color: white;
+}
+.dark-mode p.colorChange{
+  color: white;
+}
+
+.dark-mode table{
+  color:white;
+  padding: 5px;
+  border: 1px solid white;
+}
+.dark-mode th{
+  color:white;
+  padding: 5px;
+  border: 1px solid white;
+}
+.dark-mode tr{
+  color:white;
+  padding: 5px;
+  border: 1px solid white;
+}
+
+.container{
+  margin-top: 30pt
+  width:60%;
+  box-shadow: 0px 0px 1px 10px #4600008c;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 14px;
+background: rgba(136, 126, 126, 0.04);
+border: none;
+border-radius: 20px;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+font-family: 'Ubuntu', sans-serif;
+}
+.dark-mode .container{
+  box-shadow: 0px 0px 1px 10px #ee67675b;
+  background: #8600005b;
+}
+
+.row_custom {
+	  display: table-row;
+    width: 70%;
+    table-layout: fixed;
+	}
+	.col_custom_chat {
+    width: 50%;
+	  display: table-cell;
+	  padding: 1em;
+	}
+  .col_custom {
+    width: 50%;
+	  display: table-cell;
+	  padding: 1em;
+	}
+
+.button_align{
+  display :flex;
+}
+
+#Timeline_Holder{
+  margin-top: 0px;
+
+}
+
+.timeline_button_container{
+
+	  padding: 1em;
+	  border: none;
+	  margin-left: auto;
+    margin-right: auto;
+
+}
+
+button{
+  cursor: pointer;
+position: fixed;
+border-radius: 40px;
+border-style: solid;
+padding: 15px;
+background-color: rgb(97, 0, 0);
+color: white;
+
+}
+.dark-mode button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(97, 0, 0);
+}
+input[type=button]{
+  color: rgb(255, 255, 255);
+  background-color: rgb(97, 0, 0);
+}
+.dark-mode input[type=button]{
+  background-color: rgba(0, 0, 0, 0.411);
+  color: rgb(255, 255, 255);
+  border-width:3px ;
+  border-color: rgb(255, 255, 255);
+}
