@@ -1,164 +1,166 @@
 body {
-  background-color: rgb(245, 245, 245);
-  color: rgb(27, 27, 27);
-  font-family: 'Ubuntu', sans-serif;
-margin-left: 6%;
-margin-top: 6%;
+    background-color: rgb(245, 245, 245);
+    color: rgb(27, 27, 27);
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 6%;
+    margin-top: 6%;
 }
 
 .dark-mode {
-  background-color: rgb(20, 20, 20);;
-}
-.dark-mode label{
-  color: white;
-}
-.dark-mode li.colorChange{
-  color: rgb(255, 255, 255);
-}
-.dark-mode p.colorChange{
-  color: white;
+    background-color: rgb(20, 20, 20);
+    ;
 }
 
-.dark-mode table{
-  background-color: rgb(228, 228, 228);
-  color: rgba(0, 0, 0, 0.02);
-  padding: 5px;
-  border: 1px solid white;
-}
-.dark-mode th{
-  color:rgb(39, 39, 39);
-  padding: 5px;
-  border: 1px solid white;
-}
-.dark-mode tr{
-  color:rgba(0, 0, 0, 0.02);
-  padding: 5px;
-  border: 1px solid white;
+.dark-mode label {
+    color: white;
 }
 
-
-.container{
-  box-shadow: 0px 0px 5px 2.5px #4600008c;
-color: rgb(39, 56, 38);
-font-weight: 700;
-font-size: 14px;
-background: rgba(255, 255, 255, 0.582);
-border: none;
-border-radius: 20px;
-box-sizing: border-box;
-border: 2px solid rgba(0, 0, 0, 0.02);
-font-family: 'Ubuntu', sans-serif;
-
+.dark-mode li.colorChange {
+    color: rgb(255, 255, 255);
 }
-.dark-mode .container{
-  box-shadow: 0px 0px 5px 2.5px rgba(122, 122, 122, 0.712);
-  background-color:rgba(53, 53, 53, 0.863);
 
+.dark-mode p.colorChange {
+    color: black;
+}
+
+.dark-mode table {
+    background-color: rgb(228, 228, 228);
+    color: rgba(0, 0, 0, 0.02);
+    padding: 5px;
+    border: 1px solid white;
+}
+
+.dark-mode th {
+    color: rgb(39, 39, 39);
+    padding: 5px;
+    border: 1px solid white;
+}
+
+.dark-mode tr {
+    color: rgba(0, 0, 0, 0.02);
+    padding: 5px;
+    border: 1px solid white;
+}
+
+.container {
+    box-shadow: 0px 0px 5px 2.5px #4600008c;
+    color: rgb(39, 56, 38);
+    font-weight: 700;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.582);
+    border: none;
+    border-radius: 20px;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.dark-mode .container {
+    box-shadow: 0px 0px 5px 2.5px rgba(122, 122, 122, 0.712);
+    background-color: rgba(53, 53, 53, 0.863);
 }
 
 .row_custom {
-	  display: table-row;
+    display: table-row;
     width: 70%;
-padding: 40%;
-	}
- 
-	.col_custom_chat {
+    padding: 40%;
+}
+
+.col_custom_chat {
     width: 50%;
-	  display: table-cell;
-	  padding: 5em;
+    display: table-cell;
+    padding: 5em;
     background-color: rgba(219, 219, 219, 0.788);
     color: rgb(56, 56, 56);
     border-radius: 0px 20px 20px 0px;
+}
 
-	}
-  .dark-mode .col_custom_chat {
-    background-color:rgba(83, 83, 83, 0.863);
+.dark-mode .col_custom_chat {
+    background-color: rgba(83, 83, 83, 0.863);
     color: white;
-	}
-  .col_custom {
+}
+
+.col_custom {
     width: 50%;
-	  display: table-cell;
-	  padding: 1em;
+    display: table-cell;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 1em;
     border-radius: 20px 0px 0px 20px;
     background-color: rgba(241, 241, 241, 0.63);
-	}
-
-.button_align{
-  display :flex;
-  margin-top: 30px;
 }
 
-#Timeline_Holder{
-  margin-top: 0px;
-
+.button_align {
+    display: flex;
+    margin-top: 30px;
 }
 
-.timeline_button_container{
+#Timeline_Holder {
+    margin-top: 0px;
+}
 
-	  padding: 1em;
-	  border: none;
-	  margin-left: auto;
+.timeline_button_container {
+    padding: 1em;
+    border: none;
+    margin-left: auto;
     margin-right: auto;
-
 }
 
-.updateBtn1{
-  cursor: pointer;
-  margin-top:180px ;
-border-radius: 1em;
-border-style: none;
-padding: 15px;
-background-color: rgb(0, 67, 167);
-color: white;
-position: fixed;
-
-}
-.updateBtn2{
-  cursor: pointer;
-  margin-top:180px ;
-border-radius: 1em;
-border-style: none;
-padding: 15px;
-position: fixed;
-color: rgb(255, 255, 255);
-background-color:rgb(115, 168, 248);
-
-}
-.updateBtn1:hover{
-  color: rgb(0, 69, 172);
-  background-color:white;
-  border-style: solid;
-  border-color: rgb(0, 69, 172);
-}
-.updateBtn2:hover{
-  color: rgb(0, 50, 124);
-  background-color:rgb(255, 255, 255);
-  border-style: solid;
-  border-color: rgb(115, 168, 248);
-}
-button{
-  cursor: pointer;
-position: fixed;
-border-radius: 1em;
-border-style: none;
-padding: 15px;
-background-color: rgb(97, 0, 0);
-color: white;
-
+.updateBtn1 {
+    cursor: pointer;
+    margin-top: 180px;
+    border-radius: 1em;
+    border-style: none;
+    padding: 15px;
+    background-color: rgb(0, 67, 167);
+    color: white;
+    position: fixed;
 }
 
-
-input[type=button]{
-  color:  white;
-  background-color: rgb(0, 167, 8);
-  border-style: none;
+.updateBtn2 {
+    cursor: pointer;
+    margin-top: 180px;
+    border-radius: 1em;
+    border-style: none;
+    padding: 15px;
+    position: fixed;
+    color: rgb(255, 255, 255);
+    background-color: rgb(115, 168, 248);
 }
 
-input[type=button]:hover{
-    color: rgb(0, 153, 8);
-    background-color:white;
+.updateBtn1:hover {
+    color: rgb(0, 69, 172);
+    background-color: white;
     border-style: solid;
-    border-color:rgb(0, 153, 8);
-   }
-  
-   
+    border-color: rgb(0, 69, 172);
+}
+
+.updateBtn2:hover {
+    color: rgb(0, 50, 124);
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-color: rgb(115, 168, 248);
+}
+
+button {
+    cursor: pointer;
+    position: fixed;
+    border-radius: 1em;
+    border-style: none;
+    padding: 15px;
+    background-color: rgb(97, 0, 0);
+    color: white;
+}
+
+input[type=button] {
+    color: white;
+    background-color: rgb(0, 167, 8);
+    border-style: none;
+}
+
+input[type=button]:hover {
+    color: rgb(0, 153, 8);
+    background-color: white;
+    border-style: solid;
+    border-color: rgb(0, 153, 8);
+}

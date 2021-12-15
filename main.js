@@ -26,8 +26,7 @@ app.on('ready', () => {
     })
     win.maximize(),
         win.loadFile('htmlFiles/ProfessorLogin.html')
-    const menu = Menu.buildFromTemplate(menuTemplate)
-    Menu.setApplicationMenu(menu)
+
 })
 ipcMain.on('asynchronous-message', (event, arg) => {
     console.log(arg) // prints "ping"
@@ -40,7 +39,7 @@ ipcMain.on('roomName', (event, arg1, arg2) => {
     console.log(arg1)
     console.log(arg2)
     console.log(token)
-    win.webContents.on('did-finish-load', function () {
+    win.webContents.on('did-finish-load', function() {
         win.webContents.send('roomInformation', arg1, arg2, token);
 
     });
@@ -51,7 +50,7 @@ ipcMain.on('StudentRoomDisplay', (event, arg1, arg2) => {
     console.log(arg1)
     console.log(arg2)
     console.log(token)
-    win.webContents.on('did-finish-load', function () {
+    win.webContents.on('did-finish-load', function() {
         win.webContents.send('StudentRoomDisplay', arg1, arg2, token);
 
     });
@@ -114,7 +113,7 @@ ipcMain.on('axiosresponse', (event, data, data1) => {
     token = data
     username = data1
     console.log(username)
-    win.webContents.on('did-finish-load', function () {
+    win.webContents.on('did-finish-load', function() {
         win.webContents.send('RoomLogin', token, username);
 
     });
@@ -126,7 +125,7 @@ ipcMain.on('axiosresponse', (event, data, data1) => {
 ipcMain.on('Professoraxiosresponse', (event, data, data1) => {
     token = data
     username = data1
-    win.webContents.on('did-finish-load', function () {
+    win.webContents.on('did-finish-load', function() {
         win.webContents.send('CreateRoom', token, username);
 
     });

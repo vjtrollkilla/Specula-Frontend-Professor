@@ -145,7 +145,7 @@
             timer = setInterval(function() {
                 showTimeLinebasedOnExam()
                 console.log('check')
-            }, 2000)
+            }, 20000)
         }
 
         function showTimeLinebasedOnExam() {
@@ -161,7 +161,7 @@
                 while (count < response.data.length) {
                     console.log(response.data)
                     Timeline.innerHTML +=
-                        `<p class="colorChange"> ${response.data[count].student} AItimeStamp ${response.data[count].AItimeStamp} AIdangerLevel ${response.data[count].AIdangerLevel}  AItextMessage  ${response.data[count].AItextMessage} <p> <br>`
+                        `<p > ${response.data[count].student} AItimeStamp ${response.data[count].AItimeStamp} AIdangerLevel ${response.data[count].AIdangerLevel}  AItextMessage  ${response.data[count].AItextMessage} <p> <br>`
                     count = count + 1;
                     console.log(response.data.length)
                     console.log(count)
@@ -194,23 +194,22 @@
             })
         }
     </script>
-    <button onclick="myFunction()" style="font-size:24px"><i
-        class="fa fa-adjust"></i></button>
+
     <div class="container row_custom">
-        <div class="col_custom" style="height: 100px; overflow-y: scroll;">
-            <table style="padding: 5px;border: 1px solid black;">
+        <div class="col_custom" style="height: 100px; overflow: scroll;">
+            <table style="padding: 5px;border: 1px solid black;height:100px;overflow:scroll;">
                 <tr>
                     <th style="padding: 5px;width:200px;border: 1px solid black;">Students in Exam</th>
                     <th style="padding: 5px;width:400px;border: 1px solid black;">Timeline</th>
                 </tr>
-                <tr>
+                <tr style="overflow: scroll;max-height: 300px;">
                     <td style="padding: 5px;width:200px;border: 1px solid black;">
-                        <ul id="thelist">
+                        <ul id="thelist" style="overflow-y: scroll;height: 300px;">
 
                         </ul>
                     </td>
                     <td style="padding: 5px;width:400px;border: 1px solid black;">
-                        <p id="timelineExam"></p>
+                        <p id="timelineExam" style="overflow-y: scroll;height: 300px;"></p>
                     </td>
                 </tr>
             </table>
@@ -232,7 +231,7 @@
                             <textarea class="form-control" id="chat-text" rows="5"></textarea><br>
                         </div>
 
-                        <input class="btn btn-secondary btn-lg btn-block" id="submit" type="button" value="Send">
+
                     </form>
                 </div>
             </div>
